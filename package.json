@@ -1,0 +1,23 @@
+{
+  "name": "pizzanode",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "module",
+    "url": "git+https://github.com/EmilyMenken/pizzaNode.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/EmilyMenken/pizzaNode/issues"
+  },
+  "homepage": "https://github.com/EmilyMenken/pizzaNode#readme",
+  "dependencies": {
+    "express": "^4.21.2"
+  }
+}
