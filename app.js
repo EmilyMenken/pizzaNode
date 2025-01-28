@@ -17,6 +17,17 @@ app.get(`/`, (req,res) => {
 res.sendFile(`${import.meta.dirname}/views/home.html`)
 });
 
+//define thankyou.html route
+app.get(`/thankyou`, (req,res)=>{
+
+//send to thankyou.html
+
+res.sendFile(`${import.meta.dirname}/views/thankyou.html`)
+
+});
+
+
+
 //tell server to use chosen PORT
 app.listen(PORT, ()=> {
 
