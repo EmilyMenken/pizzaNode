@@ -29,6 +29,10 @@ res.sendFile(`${import.meta.dirname}/views/thankyou.html`)
 
 });
 
+app.get(`/admin/orders`, (req,res) =>{
+    res.send(orders);
+})
+
 //send to contact-us.html
 app.get(`/contactUs`, (req, res) => {
     res.sendFile(`${import.meta.dirname}/views/contact-us.html`)
