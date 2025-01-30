@@ -7,6 +7,9 @@ const app = express();
 //Serve static files
 app.use(express.static('public'));
 
+//
+app.use(express.urlencoded({extended: true}));
+
 //define a port number
 const PORT = 3000;
 
@@ -26,7 +29,17 @@ res.sendFile(`${import.meta.dirname}/views/thankyou.html`)
 
 });
 
+//send to contact-us.html
+app.get(`/contactUs`, (req, res) => {
+    res.sendFile(`${import.meta.dirname}/views/contact-us.html`)
 
+});
+
+app.post(`/submit-order`, (req,res) =>{
+
+console.log(req.body);
+res.send(`<h1>Confirmed</h1>`)
+});
 
 //tell server to use chosen PORT
 app.listen(PORT, ()=> {
@@ -34,3 +47,7 @@ app.listen(PORT, ()=> {
 console.log(`Server is running at http://localhost:${PORT}`);
 
 })
+
+
+// add nodemon npm install nodemon --save-dev
+// npx nodemon to run it
